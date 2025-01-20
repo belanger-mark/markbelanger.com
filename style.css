@@ -1,0 +1,50 @@
+/* Import the Commodore 64 font */
+@font-face {
+    font-family: 'Commodore64';
+    src: url('./fonts/commodore64.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #776cf9; /* Light blue border color */
+    display: flex;
+    justify-content: center;
+    text-align: top;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+    background-color: #150896; /* Inner blue color */
+    width: 60%;
+    height: 90%;
+
+    align-items: center;
+}
+
+.content {
+    font-family: 'Commodore64', monospace;
+    font-size: 1.6rem;
+    color: #776cf9; /* Light gray text color */
+    line-height: 2rem;
+    padding-left: 3px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: #776cf9;
+
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
